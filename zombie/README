@@ -1,0 +1,32 @@
+Summary:
+--------
+
+This code is in response to a coding test titled as
+Zombie Apocalypse v4.6.1
+========== 2021 July ==========
+of Ailo
+
+The code is written by Sandor G. Hadas on 03 July 2022.
+
+Pre-requirements:
+-----------------
+- Node.js
+- A terminal window
+
+How to run:
+-----------
+Run it from the command line using command line arguments.
+Provide at least four arguments in addition to the node command and the javascript name.  The arguments are interpreted as:
+- N providing the horizontal and vertical size of the planet,
+- Comma separated list of x and y position of the starting zombie,
+- Comma separated list of x and y location of creatures,
+- Unseparated list of the first words of the movement commands: U, D, L, R
+For example:
+$ nodejs zombie.js 4 3,1 0,1 1,2 1,1 RDRU
+
+Type invalid parameters or just 'nodejs zombie.js' to see a help message.
+
+The output shall be presented as per the specification, and in an additional table formatted data.
+
+The script return values are put into the code starting with an ERROR_ prefix.
+Error messages shall be printed to stderr via console.error(), other runtime messages shall appear in stdout via console.log().

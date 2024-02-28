@@ -1,0 +1,28 @@
+I generated the test.sql for the subset of data what looked to be important based on the test specification.  Foreign key are named and shall probably be connected.
+
+The endpoint names I would use for are probably like:
+https://api.tawk.to/tags/read_user_tags?user=<userid>
+ Returns a list of tags the user uses
+
+https://api.tawk.to/tags/tagged_movies?user=<userid>
+ Returns a list of movie ids any tag is applied by the user
+
+https://api.tawk.to/tags/tagged_movies?user=<userid>&tag_name=<tag_name>
+ Returns a list of movie ids a particular tag is applied by the user
+
+https://api.tawk.to/tags/write/create-new?user=<user_id>&tag_name=<tag_name>
+ User can create a new tag, only for him/herself (readable by anyone, just there is no create for someone else)
+
+https://api.tawk.to/tags/write/rename_tag?user=<user_id>&old_tag_name=<tag_name>&new_tag_name=<tag_name>
+ User can rename one of his/her own tag
+
+https://api.tawk.to/tags/write/delete_tag?user=<user_id>&old_tag_name=<tag_name>
+ Own tag deletion
+
+https://api.tawk.to/tags/write/add_tag_to_movie?user=<user_id>&movie=<movie_id>&tagid=<tagid>
+ User can add association of one of his/her tags to a video or movie
+
+https://api.tawk.to/tags/write/remove_tag_from_movie?user=<user_id>&movie=<movie_id>&tagid=<tagid>
+ User can remove association of one of his/her tags from a video or moviei
+
+Maybe a delete user function should also be provided, depending on how the system is designed overall.

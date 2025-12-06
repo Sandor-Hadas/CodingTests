@@ -55,7 +55,7 @@ bool RenderBmpToDC(BYTE* bmpData, size_t size, HDC hdc, const RECT& target) {
     BITMAPINFOHEADER* infoHeader = nullptr;
     BYTE* pixelData = nullptr;
 
-    // Check for 'BM' signature — full BMP file
+    // Check for 'BM' signature â€” full BMP file
     if (size >= sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER)) {
         BITMAPFILEHEADER* fileHeader = reinterpret_cast<BITMAPFILEHEADER*>(bmpData);
         if (fileHeader->bfType == 0x4D42) { // 'BM'
